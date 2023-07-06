@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Akrokerri College of Education</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Tailwind CSS Saas Landing Page" />
+        <meta name="author" content="alithemes.com" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/logos/akrotcoe/logo-removebg-preview.png" />
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="assets/css/animate.min.css?v=2.0" />
+        <link rel="stylesheet" href="assets/css/slick.css?v=2.0" />
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/tailwind-built.css?v=2.0" />
+        <link rel="stylesheet" href="assets/css/index.css">
+        <style>
+            * {box-sizing: border-box;}
+            body {font-family: Verdana, sans-serif;}
+            .mySlides {display: none;}
+            img {vertical-align: middle;}
+            
+            /* Slideshow container */
+            .slideshow-container {
+              max-width: 1000px;
+              position: relative;
+              margin: auto;
+            }
+            
+            /* Caption text */
+            .text {
+              color: #f2f2f2;
+              font-size: 15px;
+              padding: 8px 12px;
+              position: absolute;
+              bottom: 8px;
+              width: 100%;
+              text-align: center;
+            }
+            
+            /* Number text (1/3 etc) */
+            .numbertext {
+              color: #f2f2f2;
+              font-size: 12px;
+              padding: 8px 12px;
+              position: absolute;
+              top: 0;
+            }
+            
+            /* The dots/bullets/indicators */
+            .dot {
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+            
+            .active {
+              background-color: #717171;
+            }
+            
+            /* Fading animation */
+            .fade {
+              animation-name: fade;
+              animation-duration: 1.5s;
+            }
+            
+            @keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+            
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+              .text {font-size: 11px}
+            }
+         </style>
+        <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+
+        </script>
+    </head>
+    <body class="bg-white text-body font-body">
+        <div class="main">
+            <!--Header-->
+            <header class="bg-transparent sticky-bar mt-4" id="nav-bar">
+                <div class="container bg-transparent">
+                    <nav class="bg-transparent flex justify-between items-center py-3" >
+                        <a class="text-3xl font-semibold leading-none" id="logo" href="index.html">
+                                <img class="h-10" src="assets/imgs/logos/akrotcoe/main_logo.jpg" alt="" />
+                                <span class="logo-text"> Akrokerri College of Education </span>
+                        </a>
+                        <!-- <div class="logo-text">Akrokerri College of Education</div> -->
+                        <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+                            <li class="pt-4 pb-4">
+                                <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="index.html">Home</a>
+                            </li>
+                            <li class="group relative pt-4 pb-4 has-child">
+                                <a href="index.html" class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">About AKROTCOE</a>
+                                <ul class="drop-down-menu min-w-200">
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Mission and Vission</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Principal</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Management</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Officers</a>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Accreditation</a>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="group relative pt-4 pb-4 has-child">
+                                <a href="index.html" class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">Academics</a>
+                                <ul class="drop-down-menu min-w-200">
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Admission</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Admission List</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Academic Calender</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Library</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Departments</a>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Academic Programs</a>
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="group relative pt-4 pb-4 has-child">
+                                <a href="index.html" class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">Students</a>
+                                <ul class="drop-down-menu min-w-200">
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Students Portal</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Campus Life</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Handbook</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Graduation</a>
+                                    </li>
+                                    <li>
+                                        <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Fees Schedule</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- <li class="pt-4 pb-4">
+                                <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="about.html">About Us</a>
+                            </li> -->
+                            <li class="pt-4 pb-4">
+                                <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="gallery.html">Gallery</a>
+                            </li>
+                            <!-- <li class="group relative pt-4 pb-4 has-child">
+                                <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="#">Company</a>
+                                <ul class="drop-down-menu min-w-200">
+                                    <li>
+                                        <a href="portfolio.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Portfolio</a>
+                                    </li>
+                                    <li>
+                                        <a href="team.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="testimonials.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Testimonials</a>
+                                    </li>
+                                    <li>
+                                        <a href="pricing.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Pricing</a>
+                                    </li>
+                                    <li>
+                                        <a href="faqs.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Faqs</a>
+                                    </li>
+                                    <li>
+                                        <a href="404.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">404</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="group relative pt-4 pb-4 has-child">
+                                <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="#">Blog</a>
+                                <ul class="drop-down-menu min-w-200">
+                                    <li>
+                                        <a href="blog.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Category 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-2.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Category 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-single.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Single 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-single-2.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Single 2</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                            <li class="pt-4 pb-4"><a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="index.html">News</a></li>
+                        </ul>
+                        <div class="hidden lg:block">
+                            <a class="btn-primary hover-up-2" id="contact-us" href="index.html">Contact Us</a>
+                        </div>
+                        <div class="lg:hidden">
+                            <button class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
+                                <svg class="fill-current h-4 w-4" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Mobile menu</title>
+                                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <!--Mobile menu-->
+            <div class="hidden navbar-menu relative z-50 transition duration-300">
+                <div class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
+                <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300">
+                    <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-semibold leading-none" href="#">
+                            <img class="h-10" src="assets/imgs/logos/akrotcoe/main_logo.jpg" alt="" />
+                        </a>
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul class="mobile-menu">
+                            <li class="mb-1 menu-item-has-children rounded-xl">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="#">Home</a>
+                                <ul class="dropdown pl-5">
+                                    <li>
+                                        <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index.html">Home 1</a>
+                                    </li>
+                                    <li>
+                                        <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-2.html">Home 2</a>
+                                    </li>
+                                    <li>
+                                        <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-3.html">Home 3</a>
+                                    </li>
+                                    <li>
+                                        <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-4.html">Home 4</a>
+                                    </li>
+                                    <li>
+                                        <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-5.html">Home 5</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb-1 rounded-xl">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="about.html">About Us</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="services.html">Services</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="portfolio.html">Portfolio</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Team</a>
+                            </li>
+                            <li class="mb-1 menu-item-has-children rounded-xl">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Blog</a>
+                                <ul class="dropdown pl-5">
+                                    <li>
+                                        <a href="blog.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-single.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-single-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="faqs.html">Faqs</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="testimonials.html">Testimonial</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                        <div class="mt-4 pt-6 border-t border-blueGray-100">
+                            <a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 text-white rounded" href="#">Sign Up</a>
+                            <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-500 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a>
+                        </div>
+                    </div>
+                    <div class="mt-auto">
+                        <p class="my-4 text-xs text-blueGray-400">
+                            <span>Get in Touch</span>
+                            <a class="text-blue-500 hover:text-blue-500 underline" href="#">contact@monst.com</a>
+                        </p>
+                        <a class="inline-block px-1" href="#">
+                            <img src="assets/imgs/icons/facebook-blue.svg" alt="" />
+                        </a>
+                        <a class="inline-block px-1" href="#">
+                            <img src="assets/imgs/icons/twitter-blue.svg" alt="" />
+                        </a>
+                        <a class="inline-block px-1" href="#">
+                            <img src="assets/imgs/icons/instagram-blue.svg" alt="" />
+                        </a>
+                    </div>
+                </nav>
+            </div>
+
+
+            <!--Hero-->
+            <section >
+                <div class="slideshow-container" style=" height: 40vh;">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="/assets/imgs/Akrotcoe campus and events gallery/slide_show_4.jpg" alt="">
+                        <div class="text">Caption Text</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="/assets/imgs/Akrotcoe campus and events gallery/slide_show_4.jpg" alt="">
+                        <div class="text">Caption Two</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="/assets/imgs/Akrotcoe campus and events gallery/slide_show_4.jpg" alt="">
+                        <div class="text">Caption Three</div>
+                      </div>
+                    <!-- <img class="slideshow-img" src="/assets/imgs/Akrotcoe campus and events gallery/slide_show_1.jpg" alt="Image 1">
+                    <img class="slideshow-img" src="/assets/imgs/Akrotcoe campus and events gallery/slide_show_1.jpg" alt="Image 2">
+                    <img class="slideshow-img" src="/assets/imgs/Akrotcoe campus and events gallery/slide_show_1.jpg" alt="Image 3"> -->
+                </div><br>
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+                <div class="container px-4 mx-auto">
+                    <div class="pt-12 text-center">
+                        <!-- <div class="max-w-2xl mx-auto mb-8" style=" width: 100%; border-radius: 3px;">
+                            <h2 class="text-3xl lg:text-5xl lg:leading-normal mb-4 font-bold font-heading wow animate__animated animate__fadeIn">   Welcome to Akrokerri College of Education  <span style="color: rgb(50, 65, 50);" class="text">AKROTCOE</span></h2>
+                            <p class="text-blueGray-400 leading-relaxed wow animate__animated animate__fadeIn">We are <strong class="text-blue-500">TiVate</strong>, a Creative Design <span class="typewrite d-inline text-brand" data-period="3000" data-type='["Web Agency", "Social Marketing" ]'></span></p>
+                        </div> -->
+                        <!-- <div>
+                            <a class="btn-primary py-4 px-8 mr-2 wow animate__animated animate__fadeInUp hover-up-2" href="#key-features">Key Features</a>
+                            <a class="btn-white wow animate__animated animate__fadeInUp hover-up-2" data-wow-delay=".3s" href="#how-we-work">How We Work?</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="relative max-w-6xl mt-16 md:mt-8 mb-8 mx-auto">
+                    <!-- <img src="assets/imgs/Akrotcoe campus and events gallery/center_background_1.jpg" height="70px" width="100%" alt="" /> -->
+                    <div class="absolute" style="top: 9%; left: 14%; width: 72%; height: 66%">
+                        <img class="jump rounded wow animate__animated animate__fadeInUp" src="" alt="" />
+                    </div>
+                </div>
+                <div class="container px-4 mx-auto" style="background-image: url('/gallery/home_page_image.jpg'); height: 100vh; width: 100vw; margin-top: 10%;">
+                    <div class="flex flex-wrap justify-between pt-8 pb-16">
+                        <div class="hover-up-5 flex w-1/2 lg:w-auto py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                            
+                            </div>
+                            
+                        </div>
+                        <div class="hover-up-5 flex w-1/2 lg:w-auto py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+                          
+                        </div>
+                        <div class="hover-up-5 flex w-1/2 lg:w-auto py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
+                        </div>
+                        <div class="hover-up-5 flex w-1/2 lg:w-auto py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".8s">
+            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--Features-->
+            <section class="py-12 md:py-16 lg:py-32 overflow-x-hidden" id="key-features">
+                <div class="container px-4 mx-auto">
+                    <div class="flex flex-wrap lg:flex-nowrap">
+                        <div class="w-full lg:w-1/2">
+                            <div class="lg:py-6 lg:pr-32 wow animate__animated animate__fadeIn" data-wow-delay=".3s">
+                                <div class="mb-4">
+                                    <!-- <span class="text-xs py-1 px-3 text-blue-500 font-semibold bg-blue-50 rounded-xl wow animate__animated animate__fadeInDown" data-wow-delay=".9s">Why choose us</span> -->
+                                    <h2 class="text-4xl mt-5 font-bold font-heading wow animate__animated animate__fadeInUp" data-wow-delay=".3s">Programmes Offered</h2>
+                                </div>
+                                <div class="flex items-start py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                                    <div class="w-8 mr-5 text-blue-500">
+                                        <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                        </svg> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-xl font-semibold font-heading">GENERAL PROGRAMME</h3>
+                                        <p class="text-blueGray-400 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                                    <div class="w-8 mr-5 text-blue-500">
+                                        <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                        </svg> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-xl font-semibold font-heading">GENERAL PROGRAMME</h3>
+                                        <p class="text-blueGray-400 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.</p>
+                                    </div>
+                                </div><div class="flex items-start py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                                    <div class="w-8 mr-5 text-blue-500">
+                                        <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                        </svg> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-xl font-semibold font-heading">GENERAL PROGRAMME</h3>
+                                        <p class="text-blueGray-400 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                                    <div class="w-8 mr-5 text-blue-500">
+                                        <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                        </svg> -->
+                                    </div>
+                                    <div>
+                                        <h3 class="mb-2 text-xl font-semibold font-heading">GENERAL PROGRAMME</h3>
+                                        <p class="text-blueGray-400 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                                    <div class="w-8 mr-5 text-blue-500">
+                                        <!-- <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                        </svg> -->
+                                    </div>
+                                    <div>
+                                        <span><a href="index.html" style="text-decoration: none; color: rgb(97, 111, 97);">Read more ></a></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start py-4 wow animate__animated animate__fadeInUp" data-wow-delay=".9s">
+                                    <div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- <span><a href="index.html" style="text-decoration: none; color: rgb(97, 111, 97);">Read more ></a></span>
+                        <p class="text-blueGray-400 leading-loose">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.</p> -->
+
+
+
+                        <div class="relative w-full lg:w-1/2 my-12 lg:my-0">
+                            <div class="wow animate__animated animate__fadeInRight" data-wow-delay=".5s">
+                                <img class="jump relative mx-auto rounded-xl w-full z-10" src="assets/imgs/Akrotcoe campus and events gallery/talking.jpg" alt="" />
+                                <!-- <img class="absolute top-0 left-0 w-40 -ml-12 -mt-12" src="assets/imgs/elements/blob-tear.svg" alt="" />
+                                <img class="absolute bottom-0 right-0 w-40 -mr-12 -mb-12" src="assets/imgs/elements/blob-tear.svg" alt="" /> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-blueGray-50" id="how-we-work">
+                <div class="container px-4 mx-auto">
+                    <div class="flex flex-wrap items-center justify-between max-w-2xl lg:max-w-full mb-12">
+                        <div class="w-full lg:w-1/2 mb-4 lg:mb-0">
+                            <h2 class="text-3xl md:text-4xl font-bold font-heading wow animate__animated animate__fadeInDown">
+                                
+                                <span class="text-blue-500">Departments</span>
+                                
+                            </h2>
+                        </div>
+                        <div class="w-full lg:w-1/2 lg:pl-16">
+                            <p class="text-blueGray-400 leading-loose wow animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis. Quisque vitae nulla malesuada, auctor arcu vitae, luctus nisi. Sed elementum vitae ligula id imperdiet.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 -mb-6 text-center">
+                        <div class="hover-up-5 w-full md:w-1/2 lg:w-1/3 px-3 mb-6 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                            <div class="p-12 bg-white shadow rounded">
+                                <div class="flex w-12 h-12 mx-auto items-center justify-center text-blue-800 font-bold font-heading bg-blue-200 rounded-full">1</div>
+                                <!-- <img class="h-48 mx-auto my-4" src="assets/imgs/illustrations/eating.svg" alt="" /> -->
+                                <h3 class="mb-2 font-bold font-heading">Department of Mathematics</h3>
+                                <p class="text-sm text-blueGray-400 leading-relaxed">Sed ac magna sit amet risus tristique interdum at vel velit. In hac habitasse platea dictumst.</p>
+                            </div>
+                        </div>
+                        <div class="hover-up-5 w-full md:w-1/2 lg:w-1/3 px-3 mb-6 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                            <div class="p-12 bg-white shadow rounded">
+                                <div class="flex w-12 h-12 mx-auto items-center justify-center text-blue-800 font-bold font-heading bg-blue-200 rounded-full">2</div>
+                                <!-- <img class="h-48 mx-auto my-4" src="assets/imgs/illustrations/space.svg" alt="" /> -->
+                                <h3 class="mb-2 font-bold font-heading">Department of Agriculture</h3>
+                                <p class="text-sm text-blueGray-400 leading-relaxed">Sed ac magna sit amet risus tristique interdum at vel velit. In hac habitasse platea dictumst.</p>
+                            </div>
+                        </div>
+                        <div class="hover-up-5 w-full lg:w-1/3 px-3 mb-6">
+                            <div class="p-12 bg-white shadow rounded wow animate__animated animate__fadeInUp" data-wow-delay=".7s">
+                                <div class="flex w-12 h-12 mx-auto items-center justify-center text-blue-800 font-bold font-heading bg-blue-200 rounded-full">3</div>
+                                <!-- <img class="h-48 mx-auto my-4" src="assets/imgs/illustrations/tasks.svg" alt="" /> -->
+                                <h3 class="mb-2 font-bold font-heading">Department of ICT</h3>
+                                <p class="text-sm text-blueGray-400 leading-relaxed">Sed ac magna sit amet risus tristique interdum at vel velit. In hac habitasse platea dictumst.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-12 md:py-20">
+                <div class="container px-4 mx-auto">
+                    <div class="flex flex-wrap -mx-3">
+                        <div class="relative w-full lg:w-1/3 mb-8 lg:mb-0 text-center lg:text-left">
+                            <div class="max-w-md lg:max-w-xs lg:pr-16 mx-auto lg:ml-0 mb-6 lg:mb-0">
+                                <h2 class="text-3xl md:text-4xl mb-4 font-bold font-heading wow animate__animated animate__fadeInUp" data-wow-delay=".3s">Upcoming Events</h2>
+                                <p class="text-xs md:text-base text-blueGray-400 leading-loose wow animate__animated animate__fadeInUp" data-wow-delay=".9s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus eget justo et iaculis.</p>
+                            </div>
+                            <div class="lg:absolute lg:bottom-0 lg:left-0 flex justify-center">
+                                <div id="carausel-2-columns-1-arrows" class="flex"></div>
+                            </div>
+                        </div>
+                        <div class="w-full lg:w-2/3 flex flex-wrap">
+                            <div class="relative w-full">
+                                <div class="carausel-2-columns slick-carausel" id="carausel-2-columns-1">
+                                    <div class="px-3 pb-5">
+                                        <div class="card-slider group">
+                                            <img class="rounded-xl" src="/gallery/Event_1.jpg" alt="" />
+                                            <div class="flex justify-between items-end">
+                                                <div>
+                                                    <h1 class="mt-5 text-xl font-semibold group-hover:text-blue-500">SRC week celebration</h1>
+                                                </div>
+                                                <div>
+                                                    <a class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-blue-500 font-semibold leading-none border border-blue-200 hover:border-blue-500 hover:text-white hover:bg-blue-500 rounded">View Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-3 pb-5">
+                                        <div class="card-slider group">
+                                            <img class="rounded-xl" src="/gallery/Event_1.jpg" alt="" />
+                                            <div class="flex justify-between items-end">
+                                                <div>
+                                                    <h1 class="mt-5 text-xl font-semibold group-hover:text-blue-500">SRC week celebration</h1>
+                                                </div>
+                                                <div>
+                                                    <a class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-blue-500 font-semibold leading-none border border-blue-200 hover:border-blue-500 hover:text-white hover:bg-blue-500 rounded">View Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-3 pb-5">
+                                        <div class="card-slider group">
+                                            <img class="rounded-xl" src="/gallery/Event_1.jpg" alt="" />
+                                            <div class="flex justify-between items-end">
+                                                <div>
+                                                    <h1 class="mt-5 text-xl font-semibold group-hover:text-blue-500">New Event</h1>
+                                                </div>
+                                                <div>
+                                                    <a class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-blue-500 font-semibold leading-none border border-blue-200 hover:border-blue-500 hover:text-white hover:bg-blue-500 rounded">View Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-3 pb-5">
+                                        <div class="card-slider group">
+                                            <img class="rounded-xl" src="/gallery/Event_1.jpg" alt="" />
+                                            <div class="flex justify-between items-end">
+                                                <div>
+                                                    <h1 class="mt-5 text-xl font-semibold group-hover:text-blue-500">Shopping Mall</h1>
+                                                    <p class="mt-2 text-xs text-gray-500">Alibaba Co</p>
+                                                </div>
+                                                <div>
+                                                    <a class="tracking-wide hover-up-2 mr-2 inline-block px-4 py-3 text-xs text-blue-500 font-semibold leading-none border border-blue-200 hover:border-blue-500 hover:text-white hover:bg-blue-500 rounded">View Details</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="group.html" style="text-align: center; text-decoration: none; font-size: 25px; color: rgb(89, 95, 89);">Our group</a>
+
+            </section>
+
+                        <a href="group.html" style="text-align: center; text-decoration: none; font-size: 11px; color: rgb(89, 95, 89); margin-left: 20%;">Our group</a>
+
+        </div>
+        <!-- End .main -->
+
+        <!-- Preloader Start -->
+        <div id="preloader-active">
+            <div class="preloader flex-1 content-center" >
+                <div class="logo absolute inset-y-2/4 jump">
+                    <img src="/logo/main_logo-removebg-preview.png" style="width: 200px; height: 200px;" alt="" />
+                    <h1 class="text-lg font-semibold">Welcome to AKROTCOE</h1>
+                </div>
+            </div>
+        </div>
+        <!--Import Vendor Js-->
+        <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/vendor/waypoints.js"></script>
+        <script src="assets/js/vendor/counterup.js"></script>
+        <script src="assets/js/vendor/slick.js"></script>
+        <script src="assets/js/vendor/wow.js"></script>
+        <script src="assets/js/vendor/scrollup.js"></script>
+        <script src="assets/js/vendor/smooth.js"></script>
+        <script src="assets/js/vendor/textType.js"></script>
+        <script src="assets/js/vendor/mobile-menu.js"></script>
+        <script src="assets/js/main.js?v=2.0"></script>
+    </body>
+</html>

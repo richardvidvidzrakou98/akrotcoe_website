@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Tailwind CSS Saas Landing Page" />
+  <meta name="author" content="alithemes.com" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/logos/akrotcoe/logo-removebg-preview.png" />
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="assets/css/animate.min.css?v=2.0" />
+  <link rel="stylesheet" href="assets/css/slick.css?v=2.0" />
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/tailwind-built.css?v=2.0" />
+  <link rel="stylesheet" href="assets/css/index.css">
+  <style>
+    /* CSS for the gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    
+    .gallery-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      background-color: #f0f0f0;
+      position: relative;
+      cursor: pointer; /* Added cursor style */
+    }
+    
+    .gallery-item img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    /* CSS for the lightbox */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .lightbox.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-transparent sticky-bar mt-4" id="nav-bar">
+    <div class="container bg-transparent">
+        <nav class="bg-transparent flex justify-between items-center py-3" >
+            <a class="text-3xl font-semibold leading-none" id="logo" href="index.html">
+                    <img class="h-10" src="assets/imgs/logos/akrotcoe/main_logo.jpg" alt="" />
+                    <span class="logo-text"> Akrokerri College of Education </span>
+            </a>
+            <!-- <div class="logo-text">Akrokerri College of Education</div> -->
+            <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+                <li class="pt-4 pb-4">
+                    <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="index.html">Home</a>
+                </li>
+                <li class="group relative pt-4 pb-4 has-child">
+                    <a href="index.html" class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">About AKROTCOE</a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">About Us</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Mission and Vission</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Principal</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Management</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Officers</a>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Accreditation</a>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="group relative pt-4 pb-4 has-child">
+                    <a href="index.html" class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">Academics</a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Admission</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Admission List</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Academic Calender</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Library</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Departments</a>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Academic Programs</a>
+
+                        </li>
+                    </ul>
+                </li>
+                <li class="group relative pt-4 pb-4 has-child">
+                    <a href="index.html" class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">Students</a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Students Portal</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Campus Life</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Handbook</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Graduation</a>
+                        </li>
+                        <li>
+                            <a href="index.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Fees Schedule</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- <li class="pt-4 pb-4">
+                    <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="about.html">About Us</a>
+                </li> -->
+                <li class="pt-4 pb-4">
+                    <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="gallery.html">Gallery</a>
+                </li>
+                <!-- <li class="group relative pt-4 pb-4 has-child">
+                    <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="#">Company</a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li>
+                            <a href="portfolio.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="team.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Team</a>
+                        </li>
+                        <li>
+                            <a href="testimonials.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Testimonials</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="faqs.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Faqs</a>
+                        </li>
+                        <li>
+                            <a href="404.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">404</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="group relative pt-4 pb-4 has-child">
+                    <a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="#">Blog</a>
+                    <ul class="drop-down-menu min-w-200">
+                        <li>
+                            <a href="blog.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Category 1</a>
+                        </li>
+                        <li>
+                            <a href="blog-2.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Category 2</a>
+                        </li>
+                        <li>
+                            <a href="blog-single.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Single 1</a>
+                        </li>
+                        <li>
+                            <a href="blog-single-2.html" class="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">Single 2</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li class="pt-4 pb-4"><a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="index.html">News</a></li>
+            </ul>
+            <div class="hidden lg:block">
+                <a class="btn-primary hover-up-2" id="contact-us" href="index.html">Contact Us</a>
+            </div>
+            <div class="lg:hidden">
+                <button class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300">
+                    <svg class="fill-current h-4 w-4" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Mobile menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- mobile view -->
+<div class="hidden navbar-menu relative z-50 transition duration-300">
+  <div class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
+  <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300">
+      <div class="flex items-center mb-8">
+          <a class="mr-auto text-3xl font-semibold leading-none" href="#">
+              <img class="h-10" src="assets/imgs/logos/akrotcoe/main_logo.jpg" alt="" />
+          </a>
+          <button class="navbar-close">
+              <svg class="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+          </button>
+      </div>
+      <div>
+          <ul class="mobile-menu">
+              <li class="mb-1 menu-item-has-children rounded-xl">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="#">Home</a>
+                  <ul class="dropdown pl-5">
+                      <li>
+                          <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index.html">Home 1</a>
+                      </li>
+                      <li>
+                          <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-2.html">Home 2</a>
+                      </li>
+                      <li>
+                          <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-3.html">Home 3</a>
+                      </li>
+                      <li>
+                          <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-4.html">Home 4</a>
+                      </li>
+                      <li>
+                          <a class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="index-5.html">Home 5</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="mb-1 rounded-xl">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="about.html">About Us</a>
+              </li>
+              <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="services.html">Services</a>
+              </li>
+              <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="portfolio.html">Portfolio</a>
+              </li>
+              <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="pricing.html">Pricing</a>
+              </li>
+              <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Team</a>
+              </li>
+              <li class="mb-1 menu-item-has-children rounded-xl">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="team.html">Blog</a>
+                  <ul class="dropdown pl-5">
+                      <li>
+                          <a href="blog.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category 1</a>
+                      </li>
+                      <li>
+                          <a href="blog-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Category 2</a>
+                      </li>
+                      <li>
+                          <a href="blog-single.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single 1</a>
+                      </li>
+                      <li>
+                          <a href="blog-single-2.html" class="block p-3 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Single 2</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="faqs.html">Faqs</a>
+              </li>
+              <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="testimonials.html">Testimonial</a>
+              </li>
+              <li class="mb-1">
+                  <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="contact.html">Contact Us</a>
+              </li>
+          </ul>
+          <div class="mt-4 pt-6 border-t border-blueGray-100">
+              <a class="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 text-white rounded" href="#">Sign Up</a>
+              <a class="block px-4 py-3 mb-2 text-xs text-center text-blue-500 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" href="#">Log In</a>
+          </div>
+      </div>
+      <div class="mt-auto">
+          <p class="my-4 text-xs text-blueGray-400">
+              <span>Get in Touch</span>
+              <a class="text-blue-500 hover:text-blue-500 underline" href="#">contact@monst.com</a>
+          </p>
+          <a class="inline-block px-1" href="#">
+              <img src="assets/imgs/icons/facebook-blue.svg" alt="" />
+          </a>
+          <a class="inline-block px-1" href="#">
+              <img src="assets/imgs/icons/twitter-blue.svg" alt="" />
+          </a>
+          <a class="inline-block px-1" href="#">
+              <img src="assets/imgs/icons/instagram-blue.svg" alt="" />
+          </a>
+      </div>
+  </nav>
+</div>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="/gallery/1a.jpg" alt="">
+      <div class="gallery-caption">Caption 1</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1b.jpg" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1c.jpg" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1d.jpg" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1.png" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/2.png" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/3.png" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/4.png" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1aa.jpg" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1ab.jpg" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1ac.jpg" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/1ad.webp" alt="">
+      <div class="gallery-caption">Caption 2</div>
+    </div>
+    <!-- Add more gallery items with captions as needed -->
+  </div>
+
+  <div class="lightbox">
+    <span class="close-button">&times;</span>
+    <img id="lightbox-image" src="" alt="">
+  </div>
+  <script>
+    // JavaScript for handling click events (optional)
+    var galleryItems = document.getElementsByClassName('gallery-item');
+    for (var i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].addEventListener('click', function() {
+        // Handle click event here
+        console.log('Image clicked');
+      });
+    }
+
+
+
+  var galleryItems = document.getElementsByClassName('gallery-item');
+  var lightbox = document.querySelector('.lightbox');
+  var lightboxImage = document.getElementById('lightbox-image');
+  var closeButton = document.querySelector('.close-button');
+
+  for (var i = 0; i < galleryItems.length; i++) {
+    galleryItems[i].addEventListener('click', function() {
+      var clickedImageSrc = this.querySelector('img').src;
+      lightboxImage.src = clickedImageSrc;
+      lightbox.classList.add('show');
+    });
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('show');
+  }
+
+  closeButton.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', closeLightbox);
+  </script>
+   <!--Import Vendor Js-->
+   <script src="assets/js/vendor/modernizr-3.6.0.min.js"></script>
+   <script src="assets/js/vendor/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/vendor/waypoints.js"></script>
+   <script src="assets/js/vendor/counterup.js"></script>
+   <script src="assets/js/vendor/slick.js"></script>
+   <script src="assets/js/vendor/wow.js"></script>
+   <script src="assets/js/vendor/scrollup.js"></script>
+   <script src="assets/js/vendor/smooth.js"></script>
+   <script src="assets/js/vendor/textType.js"></script>
+   <script src="assets/js/vendor/mobile-menu.js"></script>
+   <script src="assets/js/main.js?v=2.0"></script>
+</body>
+</html>

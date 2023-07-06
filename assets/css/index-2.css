@@ -1,0 +1,25 @@
+.tivate-logo{
+    height: 40%;
+    width: 25%;
+}
+#sign-container{
+    width: 15%;
+    /* background-color: black; */
+}
+.ul-container{
+    margin-left: -10%;
+}
+
+
+/* Header Responsiveness */
+@media screen and (max-width: 1198px) {
+    /* .ul-container{
+        background-color: rgb(157, 158, 159);
+    } */
+    .sign-container{
+        display: inline-block;
+    }
+    .ul-container{
+        margin-left: -25%;
+    }
+  }

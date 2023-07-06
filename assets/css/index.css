@@ -1,0 +1,54 @@
+*{
+    margin-top: -5px;
+    padding: 0;
+}
+
+.h-10{
+    width: 70px;
+    height: 70px;
+    border-radius: 60%;
+    margin-left: 30%;
+    margin-top: 4px;
+}
+#contact-us{
+    background-color: rgb(108, 124, 104);
+}
+.logo-text{
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: -1%;
+}
+#logo{
+    height: 60px;
+    /* background-color: green; */
+    margin-left: -1%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+#check{
+    background-color: black;
+}
+
+#background-container {
+    background-image: linear-gradient(top, rgba(20, 20, 20, 0) 0%, rgb(255, 255, 255) 100%), url('../imgs/Akrotcoe\ campus\ and\ events\ gallery/section_bg_1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .sample-ga{
+    width: 85%;
+    height: 60vh;
+    /* background-color: black; */
+    margin-top: 3%;
+    margin-left: 7%;
+  }
+  
+  .sample-ga .slideshow-img {
+    width: 85%;
+    height: 60vh;
+    
+    display: none;
+  }
+  
